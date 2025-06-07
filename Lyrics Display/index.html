@@ -18,10 +18,12 @@
     }
 
     .lyrics-box {
-      width: 350px;
-      height: 350px;
+      width: 320px;
+      height: 320px;
       text-align: justify;
       overflow-wrap: break-word;
+      white-space: normal;
+      word-wrap: break-word;
     }
   </style>
 
@@ -29,14 +31,7 @@
     <div class="container d-flex justify-content-center align-items-center">
       <div class="row">
         <div class="col">
-          <div class="lyrics-box">
-            You know, you know where you are with You know where you are with
-            Floor collapsing Floating, bouncing back And one day I am gonna grow
-            wings A chemical reaction (you know where you are) Hysterical and
-            useless (you know where you are) Hysterical and (you know where you
-            are) Let down and hanging around Crushed like a bug in the ground
-            Let down and hanging around
-          </div>
+          <div class="lyrics-box" id="lyricsBox"></div>
         </div>
       </div>
     </div>
@@ -46,18 +41,7 @@
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous"
     ></script>
-
-    <script>
-      const lyrics = [
-        { text: "You know,", textTiming: 100 },
-        { text: "You know,", textTiming: 100 },
-        { text: "where you are with", textTiming: 100 },
-        { text: "you know,", textTiming: 100 },
-        { text: "where you are with", textTiming: 100 },
-        { text: "Floor collapsing Floating,", textTiming: 100 },
-        { text: "bouncing back And", textTiming: 100 },
-        { text: "one", textTiming: 100 },
-      ];
-    </script>
+    <script type="module" src="src/lyricsObs.js"></script>
+    <script type="module" src="src/function.js"></script>
   </body>
 </html>
