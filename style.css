@@ -1,0 +1,417 @@
+@font-face {
+  font-family: "Mahiwaga_baybayin_font";
+  src: url("Resources/Fonts/Mahiwaga_baybayin_fon-Regular.woff2")
+      format("woff2"),
+    url("Resources/Fonts/Mahiwaga_baybayin_fon-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MAZIUS REVIEW 20.09";
+  src: url("Resources/Fonts/MAZIUSREVIEW2009-Regular.woff2") format("woff2"),
+    url("Resources/Fonts/MAZIUSREVIEW2009-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("Resources/Fonts/SFProDisplay-Regular.woff2") format("woff2"),
+    url("Resources/Fonts/SFProDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.ibm-plex-sans-condensed-bold {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  background-color: #f8f8f8;
+  background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  background-repeat: repeat;
+  opacity: 80%;
+}
+
+.baybayin {
+  font-family: "Mahiwaga_baybayin_font";
+  user-select: none;
+}
+
+.baybayin-subtitle {
+  font-family: "SF Pro Display";
+  font-weight: lighter;
+  user-select: none;
+}
+
+.img-holder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.img-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-container .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.info {
+  font-size: 0.875rem;
+  margin-top: 16px;
+  font-family: "SF Pro Display";
+  max-width: 29ch;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  user-select: none;
+}
+
+span {
+  font-weight: bold;
+  color: rgb(18, 0, 221);
+}
+
+.custom-cursor-1:hover {
+  cursor: url("Resources/np_images/pencil-emoji.png") 16 16, auto;
+}
+
+.custom-cursor-2:hover {
+  cursor: url("Resources/np_images/design-emoji.png") 16 16, auto;
+}
+
+.custom-cursor-3:hover {
+  cursor: url("Resources/np_images/create-emoji.png") 16 16, auto;
+}
+
+.line-container {
+  width: clamp(155px, 88vw, 1400px);
+  height: 1px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(2, 0, 36, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  margin: 16px auto;
+}
+
+.project-title {
+  font-family: "MAZIUS REVIEW 20.09";
+  user-select: none;
+}
+
+.project-container .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  row-gap: 40px;
+}
+
+.project-container .row:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.folder-project-1 a,
+.folder-project-2 a {
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  border-radius: 12px;
+}
+
+.folder {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.08));
+}
+
+.folder-project-1 a:hover .folder,
+.folder-project-2 a:hover .folder {
+  transform: translateY(-4px);
+  filter: drop-shadow(0px 12px 24px rgba(0, 0, 0, 0.12));
+}
+
+.project-subtitle {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.folder-project-1 a:hover + .project-subtitle,
+.folder-project-2 a:hover + .project-subtitle {
+  color: #1965b1d0;
+}
+
+.project-subtitle {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 700;
+  color: #6b6b6b;
+}
+
+/* webdev */
+.go-back-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 8px;
+}
+
+.go-back-container .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-bottom: 24px;
+}
+
+.go-back {
+  font-family: "SF Pro Display";
+  font-size: 14px;
+  text-decoration: none;
+  color: #181717ea;
+}
+
+.web-dev-proj-container .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: "MAZIUS REVIEW 20.09";
+  font-size: clamp(23.04px, 2vw, 33.18px);
+  text-align: center;
+  margin-bottom: 24px;
+  width: 100%;
+  user-select: none;
+}
+
+.project-holder {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.project-holder .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-name {
+  width: 100%;
+  padding: 16px 16px 20px 20px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.212);
+}
+
+.no-line {
+  text-decoration: none;
+  position: relative;
+  font-family: "SF Pro Display";
+  font-size: 14px;
+  color: #222222;
+}
+
+/* Appdev */
+
+.project-empty {
+  width: 100%;
+  padding: 16px 16px 20px 20px;
+  text-align: left;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.212); */
+}
+
+.empty {
+  text-decoration: none;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #6b6b6b;
+}
+
+/* mediaqueries */
+@media (min-width: 768px) {
+  .profile-container .row {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .project-container .row {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .info {
+    font-size: 1rem;
+    white-space: nowrap;
+    max-width: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .profile-container .row {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .project-container .row {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .info {
+    font-size: 1rem;
+    white-space: nowrap;
+    max-width: none;
+  }
+
+  .go-back-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 8px;
+  }
+
+  .go-back-container .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-bottom: 24px;
+  }
+
+  .no-line {
+    text-decoration: none;
+    font-family: "SF Pro Display";
+    font-size: 1rem;
+    color: #222222;
+  }
+}
+
+@media (min-width: 1200px) {
+  .profile-container .row {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .project-container .row {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .info {
+    font-size: 1rem;
+    white-space: nowrap;
+    max-width: none;
+  }
+
+  .go-back-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 8px;
+  }
+
+  .go-back-container .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-bottom: 24px;
+  }
+
+  .no-line {
+    text-decoration: none;
+    font-family: "SF Pro Display";
+    font-size: 1rem;
+    color: #222222;
+  }
+}
+
+@media (min-width: 1400px) {
+  .profile-container .row {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .project-container .row {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .info {
+    font-size: 1rem;
+    white-space: nowrap;
+    max-width: none;
+  }
+
+  .go-back-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 8px;
+  }
+
+  .go-back-container .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-bottom: 24px;
+  }
+
+  .no-line {
+    text-decoration: none;
+    font-family: "SF Pro Display";
+    font-size: 1rem;
+    color: #222222;
+  }
+}
