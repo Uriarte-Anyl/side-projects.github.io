@@ -13,10 +13,6 @@
   </head>
 
   <style>
-    .container {
-      min-height: 100vh;
-    }
-
     .lyrics-box {
       width: 320px;
       height: 320px;
@@ -25,13 +21,58 @@
       white-space: normal;
       word-wrap: break-word;
     }
+
+    .lyrics-box.red {
+      color: red;
+    }
+
+    .icarus-fall {
+      position: relative;
+      opacity: 0;
+    }
+
+    .icarus-fall.animate {
+      animation-name: icarusFallingAnimation;
+      animation-duration: 2s;
+      animation-timing-function: ease-in;
+      animation-fill-mode: forwards;
+      opacity: 1;
+    }
+
+    @keyframes icarusFallingAnimation {
+      from {
+        top: 0px;
+        opacity: 0;
+      }
+      to {
+        top: 80px;
+        opacity: 1;
+      }
+    }
   </style>
 
   <body>
-    <div class="container d-flex justify-content-center align-items-center">
+    <div class="container-fluid d-flex justify-content-center">
       <div class="row">
         <div class="col">
-          <div class="lyrics-box" id="lyricsBox"></div>
+          <div class="button-wrap text-center mt-5">
+            <button id="btn">PLAY</button>
+          </div>
+          <div class="icarus-fall text-center mb-5" id="icarus">
+            <img src="image/icarus_fall.png" alt="icarus_fall.png" />
+          </div>
+          <audio controls preload="auto" id="audio" class="d-none">
+            <source src="audio/Let Down (Remastered) 4.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid d-flex justify-content-center mt-3">
+      <div class="row">
+        <div class="col">
+          <div class="lyrics-box mt-5" id="lyricsBox"></div>
         </div>
       </div>
     </div>
