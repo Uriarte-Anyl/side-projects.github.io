@@ -18,6 +18,6 @@ export const lyrics = [
   { text: "Let down", textDelay: 1000 },
   { text: "and hanging around", textDelay: 5000 },
   { text: "Crushed like a bug", textDelay: 3000 },
-  { text: "in the ground", textDelay: 3000 },
+  { text: "in the ground", textDelay: 4000 },
   { text: "Let down and hanging around.", textDelay: 2000 },
 ];
