@@ -47,13 +47,13 @@ body {
   border-radius: 16px;
   box-shadow: -1.8px -2px 2.4px #242d3c, 1.8px 2px 2.4px #111a29;
   transition-property: box-shadow, background-color, color;
-  transition-duration: 0.5s;
+  transition-duration: 0.1s;
   transition-timing-function: ease-out;
 }
 
 .container > .input-buttons:active {
-  background-color: #1d2635;
-  color: #9ea6ac;
+  background-color: #202735;
+  color: #899096;
   font-weight: 800;
   font-family: "Poppins", sans-serif;
   height: 56px;
@@ -62,5 +62,5 @@ body {
   justify-content: center;
   border-radius: 16px;
   box-shadow: inset 2px 2.8px 2.4px #111a29, inset -1.8px -1.8px 2.4px #242d3c;
-  transform: scale(0.97);
+  transform: scale(0.96);
 }
