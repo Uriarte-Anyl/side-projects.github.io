@@ -16,7 +16,75 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      .poppins-extrabold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #161f30;
+      }
+      .output-box {
+        width: 100%;
+        height: 104px;
+        background-color: #869d70;
+        margin: 32px 0px 32px 0px;
+        border-radius: 16px;
+        border: 8px solid #172431;
+        box-shadow: -2.8px -4px 2.4px #1c2737, 2.8px 4px 2.4px #111a29,
+          inset 1px 1px 2px #657462, inset 2.8px 2.8px 2.4px #6a7d5c,
+          inset 4px 4px 8px #6a7d5c;
+      }
+
+      .input-display {
+        font-size: 16px;
+      }
+
+      .output-display {
+        font-size: 24px;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        background-color: #161f30;
+        gap: 12px;
+      }
+
+      .container > .input-buttons {
+        background-color: #1d2635;
+        color: #c5cfd4;
+        font-weight: 800;
+        font-family: "Poppins", sans-serif;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        box-shadow: -1.8px -2px 2.4px #242d3c, 1.8px 2px 2.4px #111a29;
+        transition-property: box-shadow, background-color, color;
+        transition-duration: 0.1s;
+        transition-timing-function: ease-out;
+      }
+
+      .container > .input-buttons:active {
+        background-color: #202735;
+        color: #899096;
+        font-weight: 800;
+        font-family: "Poppins", sans-serif;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        box-shadow: inset 2px 2.8px 2.4px #111a29,
+          inset -1.8px -1.8px 2.4px #242d3c;
+        transform: scale(0.96);
+      }
+    </style>
   </head>
 
   <body>
@@ -34,19 +102,26 @@
     </div>
 
     <div class="container">
-      <button class="input-buttons">t</button>
-      <div class="input-buttons">1</div>
-      <div class="input-buttons">2</div>
-      <div class="input-buttons">3</div>
-      <div class="input-buttons">4</div>
-      <div class="input-buttons">5</div>
-      <div class="input-buttons">6</div>
-      <div class="input-buttons">7</div>
-      <div class="input-buttons">8</div>
-      <div class="input-buttons">9</div>
-      <div class="input-buttons">.</div>
-      <div class="input-buttons">0</div>
-      <div class="input-buttons">C</div>
+      <div id="1" class="input-buttons">C</div>
+      <div id="2" class="input-buttons">_</div>
+      <div id="3" class="input-buttons">%</div>
+      <div id="4" class="input-buttons">÷</div>
+      <div id="5" class="input-buttons">7</div>
+      <div id="6" class="input-buttons">8</div>
+      <div id="7" class="input-buttons">9</div>
+      <div id="8" class="input-buttons">×</div>
+      <div id="9" class="input-buttons">4</div>
+      <div id="." class="input-buttons">5</div>
+      <div id="0" class="input-buttons">6</div>
+      <div id="C" class="input-buttons">-</div>
+      <div id="C" class="input-buttons">1</div>
+      <div id="C" class="input-buttons">2</div>
+      <div id="C" class="input-buttons">3</div>
+      <div id="C" class="input-buttons">+</div>
+      <div id="C" class="input-buttons">0</div>
+      <div id="C" class="input-buttons">.</div>
+      <div id="C" class="input-buttons"></div>
+      <div id="C" class="input-buttons">=</div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
