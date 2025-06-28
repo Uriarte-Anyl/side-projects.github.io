@@ -54,7 +54,7 @@
         gap: 12px;
       }
 
-      .container > .input-buttons {
+      .container .input-buttons {
         background-color: #1d2635;
         color: #c5cfd4;
         font-weight: 800;
@@ -66,11 +66,11 @@
         border-radius: 16px;
         box-shadow: -1.8px -2px 2.4px #242d3c, 1.8px 2px 2.4px #111a29;
         transition-property: box-shadow, background-color, color;
-        transition-duration: 0.1s;
-        transition-timing-function: ease-out;
+        transition-duration: 1s;
+        transition-timing-function: ease;
       }
 
-      .container > .input-buttons:active {
+      .container .input-buttons:active {
         background-color: #202735;
         color: #899096;
         font-weight: 800;
@@ -90,7 +90,7 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col">
+        <div class="col-12">
           <div
             class="output-box d-flex flex-column justify-content-center align-items-end"
           >
@@ -102,7 +102,7 @@
     </div>
 
     <div class="container">
-      <div id="1" class="input-buttons">C</div>
+      <div ontouchstart="touchAnimate()" id="1" class="input-buttons">C</div>
       <div id="2" class="input-buttons">_</div>
       <div id="3" class="input-buttons">%</div>
       <div id="4" class="input-buttons">÷</div>
