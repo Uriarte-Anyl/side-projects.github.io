@@ -78,24 +78,9 @@
         justify-content: center;
         border-radius: 16px;
         animation-name: buttonAnimate;
-        animation-duration: 0.5s;
-        animation-timing-function: ease;
+        animation-duration: 0.1s;
+        animation-timing-function: ease-in;
       }
-
-      /* .container .input-buttons:active {
-        background-color: #202735;
-        color: #899096;
-        font-weight: 800;
-        font-family: "Poppins", sans-serif;
-        height: 56px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 16px;
-        box-shadow: inset 2px 2.8px 2.4px #111a29,
-          inset -1.8px -1.8px 2.4px #242d3c;
-        transform: scale(0.96);
-      } */
     </style>
   </head>
 
@@ -106,34 +91,34 @@
           <div
             class="output-box d-flex flex-column justify-content-center align-items-end"
           >
-            <div id="input" class="input-display mx-3">01</div>
-            <div id="output" class="output-display mx-3">01</div>
+            <div id="input" class="input-display mx-3">0</div>
+            <div id="output" class="output-display mx-3">0</div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <div id="clear" class="input-buttons">C</div>
-      <div id="-" class="input-buttons">_</div>
-      <div id="%" class="input-buttons">%</div>
-      <div id="÷" class="input-buttons">÷</div>
-      <div id="7" class="input-buttons">7</div>
-      <div id="8" class="input-buttons">8</div>
-      <div id="9" class="input-buttons">9</div>
-      <div id="×" class="input-buttons">×</div>
-      <div id="4" class="input-buttons">4</div>
-      <div id="5" class="input-buttons">5</div>
-      <div id="6" class="input-buttons">6</div>
-      <div id="-" class="input-buttons">-</div>
-      <div id="1" class="input-buttons">1</div>
-      <div id="2" class="input-buttons">2</div>
-      <div id="3" class="input-buttons">3</div>
-      <div id="+" class="input-buttons">+</div>
-      <div id="0" class="input-buttons">0</div>
-      <div id="." class="input-buttons">.</div>
-      <div id="" class="input-buttons"></div>
-      <div id="=" class="input-buttons">=</div>
+      <div class="input-buttons" data-action="clear">C</div>
+      <div class="input-buttons" data-value="_">_</div>
+      <div class="input-buttons" data-value="%">%</div>
+      <div class="input-buttons" data-value="÷">÷</div>
+      <div class="input-buttons" data-value="7">7</div>
+      <div class="input-buttons" data-value="8">8</div>
+      <div class="input-buttons" data-value="9">9</div>
+      <div class="input-buttons" data-value="×">×</div>
+      <div class="input-buttons" data-value="4">4</div>
+      <div class="input-buttons" data-value="5">5</div>
+      <div class="input-buttons" data-value="6">6</div>
+      <div class="input-buttons" data-value="-">-</div>
+      <div class="input-buttons" data-value="1">1</div>
+      <div class="input-buttons" data-value="2">2</div>
+      <div class="input-buttons" data-value="3">3</div>
+      <div class="input-buttons" data-value="+">+</div>
+      <div class="input-buttons" data-value="0">0</div>
+      <div class="input-buttons" data-value=".">.</div>
+      <div class="input-buttons" data-action="delete">DEL</div>
+      <div class="input-buttons" data-action="equal">=</div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
