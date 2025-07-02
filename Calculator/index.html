@@ -54,8 +54,21 @@
         gap: 12px;
       }
 
+      @keyframes buttonAnimate {
+        from {
+          background-color: #1d2635;
+          box-shadow: -1.8px -2px 2.4px #242d3c, 1.8px 2px 2.4px #111a29;
+        }
+        to {
+          box-shadow: inset 2px 2.8px 2.4px #111a29,
+            inset -1.8px -1.8px 2.4px #242d3c;
+          transform: scale(0.96);
+        }
+      }
+
       .container .input-buttons {
         background-color: #1d2635;
+        box-shadow: -1.8px -2px 2.4px #242d3c, 1.8px 2px 2.4px #111a29;
         color: #c5cfd4;
         font-weight: 800;
         font-family: "Poppins", sans-serif;
@@ -64,13 +77,12 @@
         align-items: center;
         justify-content: center;
         border-radius: 16px;
-        box-shadow: -1.8px -2px 2.4px #242d3c, 1.8px 2px 2.4px #111a29;
-        transition-property: box-shadow, background-color, color;
-        transition-duration: 1s;
-        transition-timing-function: ease;
+        animation-name: buttonAnimate;
+        animation-duration: 0.5s;
+        animation-timing-function: ease;
       }
 
-      .container .input-buttons:active {
+      /* .container .input-buttons:active {
         background-color: #202735;
         color: #899096;
         font-weight: 800;
@@ -83,7 +95,7 @@
         box-shadow: inset 2px 2.8px 2.4px #111a29,
           inset -1.8px -1.8px 2.4px #242d3c;
         transform: scale(0.96);
-      }
+      } */
     </style>
   </head>
 
@@ -102,31 +114,32 @@
     </div>
 
     <div class="container">
-      <div ontouchstart="touchAnimate()" id="1" class="input-buttons">C</div>
-      <div id="2" class="input-buttons">_</div>
-      <div id="3" class="input-buttons">%</div>
-      <div id="4" class="input-buttons">÷</div>
-      <div id="5" class="input-buttons">7</div>
-      <div id="6" class="input-buttons">8</div>
-      <div id="7" class="input-buttons">9</div>
-      <div id="8" class="input-buttons">×</div>
-      <div id="9" class="input-buttons">4</div>
-      <div id="." class="input-buttons">5</div>
-      <div id="0" class="input-buttons">6</div>
-      <div id="C" class="input-buttons">-</div>
-      <div id="C" class="input-buttons">1</div>
-      <div id="C" class="input-buttons">2</div>
-      <div id="C" class="input-buttons">3</div>
-      <div id="C" class="input-buttons">+</div>
-      <div id="C" class="input-buttons">0</div>
-      <div id="C" class="input-buttons">.</div>
-      <div id="C" class="input-buttons"></div>
-      <div id="C" class="input-buttons">=</div>
+      <div ontouchstart="touchAnimate()" id="clear" class="input-buttons">C</div>
+      <div ontouchstart="touchAnimate()" id="-" class="input-buttons">_</div>
+      <div ontouchstart="touchAnimate()" id="%" class="input-buttons">%</div>
+      <div ontouchstart="touchAnimate()" id="÷" class="input-buttons">÷</div>
+      <div ontouchstart="touchAnimate()" id="7" class="input-buttons">7</div>
+      <div ontouchstart="touchAnimate()" id="8" class="input-buttons">8</div>
+      <div ontouchstart="touchAnimate()" id="9" class="input-buttons">9</div>
+      <div ontouchstart="touchAnimate()" id="×" class="input-buttons">×</div>
+      <div ontouchstart="touchAnimate()" id="4" class="input-buttons">4</div>
+      <div ontouchstart="touchAnimate()" id="5" class="input-buttons">5</div>
+      <div ontouchstart="touchAnimate()" id="6" class="input-buttons">6</div>
+      <div ontouchstart="touchAnimate()" id="-" class="input-buttons">-</div>
+      <div ontouchstart="touchAnimate()" id="1" class="input-buttons">1</div>
+      <div ontouchstart="touchAnimate()" id="2" class="input-buttons">2</div>
+      <div ontouchstart="touchAnimate()" id="3" class="input-buttons">3</div>
+      <div ontouchstart="touchAnimate()" id="+" class="input-buttons">+</div>
+      <div ontouchstart="touchAnimate()" id="0" class="input-buttons">0</div>
+      <div ontouchstart="touchAnimate()" id="." class="input-buttons">.</div>
+      <div ontouchstart="touchAnimate()" id="" class="input-buttons"></div>
+      <div ontouchstart="touchAnimate()" id="=" class="input-buttons">=</div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
