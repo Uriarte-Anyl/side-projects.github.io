@@ -1,6 +1,6 @@
 document.querySelectorAll(".input-buttons").forEach((btn) => {
   btn.addEventListener("click", touchAnimate);
-  btn.addEventListener("touchStart", touchAnimate);
+  btn.addEventListener("touchstart", touchAnimate);
 });
 
 function touchAnimate(event) {
@@ -11,7 +11,7 @@ function touchAnimate(event) {
   elem.style.animation = "buttonAnimate 0.5s ease";
 
   elem.addEventListener(
-    "animationEnd",
+    "animationend",
     () => {
       elem.style.animation = "";
     },
