@@ -6,8 +6,10 @@
     <title>Calculator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -17,15 +19,18 @@
       crossorigin="anonymous"
     />
     <style>
-      .poppins-extrabold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 800;
+      .rubik-font {
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
         font-style: normal;
       }
       body {
         margin: 0;
         padding: 0;
         background-color: #161f30;
+        font-family: "Rubik", sans-serif;
+        font-weight: 700;
       }
       .output-box {
         width: 100%;
@@ -55,14 +60,18 @@
       }
 
       @keyframes buttonAnimate {
-        from {
-          background-color: #1d2635;
+        0% {
+          transform: scale(1);
           box-shadow: -1.8px -2px 2.4px #242d3c, 1.8px 2px 2.4px #111a29;
         }
-        to {
+        50% {
+          transform: scale(0.96);
           box-shadow: inset 2px 2.8px 2.4px #111a29,
             inset -1.8px -1.8px 2.4px #242d3c;
-          transform: scale(0.96);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: -1.8px -2px 2.4px #242d3c, 1.8px 2px 2.4px #111a29;
         }
       }
 
@@ -70,16 +79,11 @@
         background-color: #1d2635;
         box-shadow: -1.8px -2px 2.4px #242d3c, 1.8px 2px 2.4px #111a29;
         color: #c5cfd4;
-        font-weight: 800;
-        font-family: "Poppins", sans-serif;
         height: 56px;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 16px;
-        animation-name: buttonAnimate;
-        animation-duration: 0.1s;
-        animation-timing-function: ease-in;
       }
     </style>
   </head>
@@ -100,7 +104,7 @@
 
     <div class="container">
       <div class="input-buttons" data-action="clear">C</div>
-      <div class="input-buttons" data-value="_">_</div>
+      <div class="input-buttons" data-action="toggle-negative">-</div>
       <div class="input-buttons" data-value="%">%</div>
       <div class="input-buttons" data-value="÷">÷</div>
       <div class="input-buttons" data-value="7">7</div>

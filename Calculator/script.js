@@ -9,24 +9,32 @@ function handleInput(event) {
   const inputDisplay = document.getElementById("input");
   const outputDisplay = document.getElementById("output");
 
- 
   animateButton(button);
 
- 
+  if (action === "toggle-negative") {
+    let current = inputDisplay.innerText;
+
+    if (current.startsWith("-")) {
+      inputDisplay.innerText = current.slice(1);
+    } else {
+      inputDisplay.innerText = "-" + current;
+    }
+
+    return;
+  }
+
   if (action === "clear") {
     inputDisplay.innerText = "0";
     outputDisplay.innerText = "0";
     return;
   }
 
- 
   if (action === "delete") {
     let current = inputDisplay.innerText;
     inputDisplay.innerText = current.length > 1 ? current.slice(0, -1) : "0";
     return;
   }
 
-  
   if (action === "equal") {
     try {
       // replace the symbols for clear visual representation
@@ -41,7 +49,6 @@ function handleInput(event) {
     return;
   }
 
- 
   if (value) {
     if (inputDisplay.innerText === "0") {
       inputDisplay.innerText = value;
@@ -53,7 +60,7 @@ function handleInput(event) {
 
 function animateButton(elem) {
   elem.style.animation = "none";
-  elem.offsetHeight; 
+  elem.offsetHeight;
   elem.style.animation = "buttonAnimate 0.5s ease";
   elem.addEventListener(
     "animationend",
