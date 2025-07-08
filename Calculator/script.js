@@ -61,7 +61,7 @@ function handleInput(event) {
 function animateButton(elem) {
   elem.style.animation = "none";
   elem.offsetHeight;
-  elem.style.animation = "buttonAnimate 0.5s ease";
+  elem.style.animation = "buttonAnimate 0.2s ease";
   elem.addEventListener(
     "animationend",
     () => {

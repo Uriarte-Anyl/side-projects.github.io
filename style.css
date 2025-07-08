@@ -38,7 +38,7 @@ body {
   padding: 0px;
   overflow-x: hidden;
   background-color: #f8f8f8;
-  background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  /* background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png"); */
   background-repeat: repeat;
   opacity: 80%;
 }
