@@ -29,16 +29,39 @@
         font-style: normal;
       }
 
+      :root {
+        --f-header: 900 normal 24px/36px "Poppins", sans-serif;
+        --f-body: 400 normal 16px/24px "Poppins", sans-serif;
+      }
+
       .header {
-        font: 900 normal 24px/36px "Poppins", sans-serif;
+        font: var(--f-header);
       }
 
       .task-wrapper {
-        font: 400 normal 16px/24px "Poppins", sans-serif;
+        font: var(--f-body);
       }
 
-      .card{
+      .card {
         border: 1px solid hsl(0, 0%, 90%);
+      }
+
+      input {
+        height: 32px;
+        border: 1px solid hsl(0, 0%, 80%);
+        border-right: none;
+      }
+
+      input::placeholder {
+        font: var(--f-body);
+        padding-left: 8px;
+        color: hsl(0, 0%, 60%);
+      }
+
+      button.btn.btn-primary {
+        font: var(--f-body);
+        height: 32px;
+        border-radius: 0px;
       }
     </style>
   </head>
@@ -48,10 +71,34 @@
         <div class="col">
           <div class="card my-5 shadow-sm bg-white text-dark ps-2">
             <div class="header">
-              <div class="header fs-5">MY TASK</div>
-              <div class="box">
+              <div class="header fs-5 text-center my-2">MY TASKS</div>
+              <div
+                class="input-task-wrapper d-flex flex-row justify-content-center"
+              >
+                <input type="text" placeholder="Title of tasks.." />
+                <button
+                  type="button"
+                  class="btn btn-primary d-flex flex-row align-items-center"
+                >
+                  Add<svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-plus"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="box my-3">
                 <div class="task-wrapper">
-                  <div class="task">First task</div>
+                  <ul style="list-style-type: none">
+                    <li>First task</li>
+                  </ul>
                 </div>
               </div>
             </div>
