@@ -11,3 +11,17 @@ function addTask() {
     }
     document.getElementById("userInput").value = "";
 }
+
+function closeTask() {
+    var listOfTask = document.getElementsByTagName("li");
+
+    for (let list = 0; list < listOfTask.length; list++) {
+        var span = document.createElement("span");
+        var text = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(text);
+        listOfTask[list].appendChild(span);
+    }
+}
+
+closeTask();
