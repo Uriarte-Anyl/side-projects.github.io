@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booleans</title>
+</head>
+
+<!-- Logical Operators combines boolean values 
+ lower priority in order of operations
+-->
+ 
+<!-- Shortcuts for if-statements
+Ternary -> ?
+Guard -> && "Checks if two sides are truthy"
+Default -> || "Checks if ones side is truthy"
+-->
+
+<!-- Short Circuit Evalution in AND operator
+  * Stops Early 
+  * Doesnt run the code on the right 
+  -->
+<body>
+  <script>
+    true
+    false
+
+    console.log(3 > 5);
+
+    console.log(5 === '5.00');
+
+    if (true) 
+      console.log('hello');
+    else {
+      console.log('else');
+    }
+
+    const age = 12;
+
+    if (age >= 16) {
+      console.log('You can drive');
+      console.log('Congrats!')
+    } else if (age >= 14) {
+      console.log('Almost There!');
+    } else {
+      console.log('You can not drive');
+    }
+
+    // AND operator
+    console.log(0.2 >= 0 && 0.2 < 1 / 3);
+
+    // OR operator
+    console.log(true || false);
+
+    // NOT operator
+    console.log(!false);
+
+    // Truthy and Falsy Value
+    // Falsy Values: 0 '' null NaN undefined
+    if (0) {
+      console.log('truthy')
+    }
+
+    const cartQuantity = 5;
+
+    if (cartQuantity) {
+      console.log('cart has products.')
+    }
+    console.log(!0);
+    // NaN
+    console.log('text' / 5);
+    // undefined
+    let variable;
+    console.log(variable);
+
+    // Ternary Operator -> Shortcut
+    const result = 0 ? 'truthy' : 'falsy';
+    console.log(result);
+
+    // Guard Operator -> Shortcut
+    // let message;
+    // if (condition) {
+    //   message = 'hello';
+    // } shortcut of this if else
+    false && console.log('hello');
+
+    const message = 1 && 'hello';
+    console.log(message);
+
+    //Default Operator -> Sets a default value
+    // let currency;
+    // if (!condition) {
+    //   currency = 'USD';
+    // } shortcut of this if else
+    const currency = undefined || 'USD';
+    console.log(currency)
+  </script>
+</body>
+</html>
