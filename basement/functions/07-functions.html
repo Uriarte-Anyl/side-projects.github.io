@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions</title>
+</head>
+  <!-- Functions = let's us reuse codes, easier to update.
+  recommended: when naming a function use an action word.
+  
+  return = gets a value out of a function.
+  parameter = put a value into a function.
+
+  early return =  when a specific condition is met it exits the function before reaching the end of the code.
+  -->
+<body>
+  <script>
+    function func1() {
+      console.log('hello');
+      console.log(2 + 2);
+    }
+
+    func1();
+
+    function calculateTax(cost, taxPercent = 0.1){
+      console.log(cost * taxPercent); 
+    }
+
+    calculateTax(2000, 0.2);
+    calculateTax(5000);
+  </script>
+</body>
+</html>
