@@ -7,18 +7,18 @@
 </head>
 <body>
   <script>
-    // const product = {
-    //   name: 'basketball',
+    const product = {
+      name: 'basketball',
 
-    //   price: 2095,
+      price: 2095,
 
-    //   ['delivery-time']: '3 days', 
-    // };
+      ['delivery-time']: '3 days', 
+    };
 
-    // product.price = 2095 + 500;
+    product.price = 2095 + 500;
 
-    // console.log(product.price);
-    // console.log(product['delivery-time']);
+    console.log(product.price);
+    console.log(product['delivery-time']);
 
     function comparePrice(product1, product2) {
       const productComparison = product1.price < product2.price ? product1 : product2;
@@ -38,26 +38,30 @@
 
     console.log(comparePrice(product1, product2));
 
-    // const product3 = {
-    //   name: 'Nike Air Max',
-    //   price: 2099
-    // };
+    const product3 = {
+      name: 'Nike Air Max',
+      price: 2099
+    };
 
-    // const product4 = {
-    //   name: 'Nike Air Max',
-    //   price: 2099
-    // };
+    const product4 = {
+      name: 'Nike Air Max',
+      price: 2099
+    };
 
-    // const product5 = {
-    //   name: 'Adibadibabas',
-    //   price: 1999
-    // }
+    const product5 = {
+      name: 'Adibadibabas',
+      price: 1999
+    }
 
-    // function isSameProduct(product3, product4) {
-    //   return (product5.name === product4.name && product5.price === product4.price);
-    // }
+    function isSameProduct(product3, product4) {
+      return (product5.name === product4.name && product5.price === product4.price);
+    }
 
-    // console.log(isSameProduct(product3, product4));
+    console.log(isSameProduct(product3, product4));
+
+    console.log('GOOD MORNING'.toLowerCase());
+
+    console.log('Test'.repeat(2));
 
 
 
