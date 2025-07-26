@@ -11,16 +11,16 @@
   <script>
     let result = '';
     const flip = Math.random();
-
-        
+    const toss = flip < 0.5 ? 'heads' : 'tails';
 
     function playGame(guess) {
-      if (guess === 'heads'){
-        if (flip === 'heads') {
-          result = 'Win.'
-        }
-      } else if (playerMove === 'tails');
-        result = 'tails'
+      if (guess === toss){
+          result = 'YOU WIN'
+      } else {
+          result = 'YOU LOSE'
+      }
+      
+      alert(`You choosed: ${guess} The coin is ${toss}, ${result}`);
     }
   </script>
 </body>
