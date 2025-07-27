@@ -9,18 +9,23 @@
   <button onclick="playGame('heads')">Heads</button>
   <button onclick="playGame('tails')">Tails</button>
   <script>
-    let result = '';
-    const flip = Math.random();
-    const toss = flip < 0.5 ? 'heads' : 'tails';
+    const score = JSON.parse(localStorage.getItem('score')) || {wins: 0, losses: 0};
 
     function playGame(guess) {
-      if (guess === toss){
-          result = 'YOU WIN'
+      const toss = Math.random();
+      const result = toss < 0.5 ? 'heads' : 'tails';
+
+      alert(guess === result ? 'You Win!' : 'You Lose :<');
+
+      if (guess === result) {
+        score.wins++;
       } else {
-          result = 'YOU LOSE'
+        score.losses++;
       }
-      
-      alert(`You choosed: ${guess} The coin is ${toss}, ${result}`);
+
+      console.log(score);
+
+      localStorage.setItem('score', JSON.stringify(score));
     }
   </script>
 </body>
