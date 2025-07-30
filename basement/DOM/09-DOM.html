@@ -5,10 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DOM</title>
 </head>
+
+  <!-- document object represents/models the webpage 
+      it combines js and html together.
+
+      tip: html is converted into js object.
+
+      document.querySelector() = gets any element from the page and put inside the javascript.
+
+      tip: every html element has a property innerHTML.
+  -->
 <body>
   <button>hello</button>
+  <button class="js-button">second button</button>
+  
   <script>
+    document.querySelector('button')
+        .innerHTML = 'changed';
 
+    const buttonElement = document.querySelector('.js-button');
+
+    // console.log(document.title);
+    // document.title = 'changed';
+
+    // console.log(document.body);
+    // document.body.innerHTML = '<button>Good Job</button>';
+
+    // document.body.innerHTML = 'hello';
+    // document.title = 'Good Job';
   </script>
 </body>
 </html>
