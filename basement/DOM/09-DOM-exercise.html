@@ -6,11 +6,29 @@
   <title>Document</title>
 </head>
 <body>
-  <button onclick="
-    document.querySelector('button')
-    ">9a</button>
+  <button>9a</button>
+  
+  <button class="js-btn-done">
+    9b
+  </button>
 
+  <button>heads</button>
+  <button>tails</button>
+  <p></p>
+  
   <script>
+    console.log(document.querySelector('button'));
+
+    document.querySelector('.js-btn-done')
+      .innerText = '9b done!'
+
+    function pickMove() {
+      if (condition) {
+        
+      } else {
+        
+      }
+    }
 
   </script>
 </body>
