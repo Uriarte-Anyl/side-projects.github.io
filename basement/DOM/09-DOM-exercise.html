@@ -12,21 +12,27 @@
     9b
   </button>
 
-  <button>heads</button>
-  <button>tails</button>
-  <p></p>
+  <button onclick="
+    chooseMove('heads');
+  ">heads</button>
+  <button onclick="
+    chooseMove('tails');
+  ">tails</button>
+  <p class="js-display"></p>
   
   <script>
     console.log(document.querySelector('button'));
 
     document.querySelector('.js-btn-done')
-      .innerText = '9b done!'
+      .innerText = '9b done!';
 
-    function pickMove() {
-      if (condition) {
-        
-      } else {
-        
+    let displayElement = document.querySelector('.js-display')
+      
+    function chooseMove(move) {
+      if (move === 'heads') {
+        displayElement.innerHTML = 'You chose: heads';
+      } else if (move === 'tails') {
+        displayElement.innerHTML = 'You chose: tails';
       }
     }
 
