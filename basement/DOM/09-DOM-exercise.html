@@ -12,6 +12,8 @@
     9b
   </button>
 
+ 
+
   <button onclick="
     chooseMove('heads');
   ">heads</button>
@@ -19,6 +21,17 @@
     chooseMove('tails');
   ">tails</button>
   <p class="js-display"></p>
+
+   <input placeholder="Name" class="js-name-input"> 
+   <p class="js-message"></p>
+   
+   <button onclick="
+    const nameElement = document.querySelector('.js-name-input');
+
+    document.querySelector('.js-message')
+    .innerText = `Your Name is: ${nameElement.value}`;
+   ">Submit</button>
+   <p></p>
   
   <script>
     console.log(document.querySelector('button'));
@@ -35,7 +48,6 @@
         displayElement.innerHTML = 'You chose: tails';
       }
     }
-
   </script>
 </body>
 </html>
