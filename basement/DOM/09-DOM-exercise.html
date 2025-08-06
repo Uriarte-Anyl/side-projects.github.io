@@ -20,9 +20,12 @@
   <button onclick="
     chooseMove('tails');
   ">tails</button>
+  
   <p class="js-display"></p>
 
-   <input placeholder="Name" class="js-name-input"> 
+   <input placeholder="Name" class="js-name-input" 
+    onkeydown="handleEnterPress(event)"
+   > 
    <p class="js-message"></p>
    
    <button onclick="
@@ -46,6 +49,13 @@
         displayElement.innerHTML = 'You chose: heads';
       } else if (move === 'tails') {
         displayElement.innerHTML = 'You chose: tails';
+      }
+    }
+
+    function handleEnterPress(event) {
+      if(event.key === 'Enter'){
+        document.querySelector('.js-message')
+          .innerText = `Your Name is: ${nameElement.value}`;
       }
     }
   </script>
