@@ -65,50 +65,42 @@
 
   <div style="margin-top: 16px;">
     <button class="js-btn btn" 
-    onclick="
-      const btnToggleElement = document
-      .querySelector('.js-btn');
-
-      if (!btnToggleElement.classList.contains  ('is-toggled')){
-        btnToggleElement.classList.add('is-toggled');
-      } else {
-        btnToggleElement.classList.remove('is-toggled');
-      }
-    "
+    onclick="togglebutton('.js-btn')"
     >Gaming</button>
 
     <button class="js-btn-2 btn" 
-    onclick="
-      const btnToggleElement = document
-      .querySelector('.js-btn-2');
-
-      if (!btnToggleElement.classList.contains  ('is-toggled')){
-        btnToggleElement.classList.add('is-toggled');
-      } else {
-        btnToggleElement.classList.remove('is-toggled');
-      }
-    "
+    onclick="togglebutton('.js-btn-2')"
     >Tech</button>
 
     <button class="js-btn-3 btn" 
-    onclick="
-      const btnToggleElement = document
-      .querySelector('.js-btn-3');
-
-      if (!btnToggleElement.classList.contains  ('is-toggled')){
-        btnToggleElement.classList.add('is-toggled');
-      } else {
-        btnToggleElement.classList.remove('is-toggled');
-      }
-    "
+    onclick="togglebutton('.js-btn-3')"
     >Music</button>
   </div>
 
   <script>
-    const btn = document.querySelector('.js-btn');
+    // const btn = document.querySelector('.js-btn');
 
-    console.log(btn.classList
-      .contains('.js-btn'));
+    // console.log(btn.classList
+    //  .contains('.js-btn'));
+
+    function togglebutton(selector) {
+      const btnToggleElement = document
+      .querySelector(selector);
+
+      if (!btnToggleElement.classList.contains('is-toggled')){
+        turnOffPreviousBtn();
+        btnToggleElement.classList.add('is-toggled');
+      } else {
+        btnToggleElement.classList.remove('is-toggled');
+      }
+    }
+
+    function turnOffPreviousBtn() {
+      const previousBtn = document.querySelector('.is-toggled');
+      if (previousBtn) {
+        previousBtn.classList.remove('is-toggled');
+      }
+    }
   </script>
 </body>
 </html>
