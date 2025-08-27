@@ -40,6 +40,79 @@
     for (let i = 5; i >= 0; i--){
       console.log(i);
     }
+
+    let i = 0;
+    while (i <= 10) {
+      console.log(i);
+      i+=2;
+    }
+
+    let j = 5;
+    while(j >= 0){
+      console.log(j);
+      j--;
+    }
+
+    const array = [1, 2, 3];
+    const result = [];
+
+    for(let i = 0; i < array.length; i++ ){
+      result.push(array[i] + 1);
+    }
+
+    console.log(result);
+
+    function arraySwap(array){
+      const result = [];
+
+      for(let i = 0; i < array.length; i++){
+        result.push(array[i] + 1);
+      }
+
+      return result;
+    }
+
+    console.log(arraySwap([1, 2, 3]));
+    console.log(arraySwap([-2, -1, 0, 99]));
+
+    function addNum(array, num){
+      const result = [];
+
+      for(let i = 0; i < array.length; i++){
+        result.push(array[i] + num);
+      }
+
+      return result;
+    }
+
+    console.log(addNum([1, 2, 3], 2));
+
+    function addArrays(array1, array2) {
+      const result = [];
+
+      for(let i = 0; i < array1.length; i++){
+        result.push(array1[i] + array2[i]);
+      }
+
+      return result;
+    }
+
+    console.log(addArrays([1,1,2], [1, 1, 3]));
+    console.log(addArrays([1,2,3], [4, 5, 6]));
+
+    function countPositive(nums){
+      let result = 0;
+
+      for(let i = 0; i < nums.length; i++){
+        if(nums[i] > 0){
+          result++;
+        }
+      }
+
+      return result;
+    }
+
+    console.log(countPositive([1, -3, 5]));
   </script>
 </body>
 </html>
